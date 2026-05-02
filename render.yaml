@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: tuvi-grok-app
+    name: tuvi-grok
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: python app.py
     envVars:
       - key: GROK_API_KEY
         sync: false
